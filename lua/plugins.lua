@@ -2,9 +2,11 @@ vim.pack.add({
 	"https://github.com/D0nw0r/dark2026.nvim",
 	"https://github.com/nvim-neo-tree/neo-tree.nvim",
 	"https://github.com/MunifTanjim/nui.nvim",
+	"https://github.com/nvim-tree/nvim-web-devicons",
 	"https://github.com/nvim-lua/plenary.nvim",
 	"https://github.com/nvim-mini/mini.nvim",
 	"https://github.com/neovim/nvim-lspconfig",
+	"https://github.com/folke/trouble.nvim",
 	"https://github.com/mason-org/mason-lspconfig.nvim",
 	"https://github.com/stevearc/conform.nvim",
 	"https://github.com/lewis6991/gitsigns.nvim",
@@ -14,6 +16,8 @@ vim.pack.add({
 })
 
 require("mini.pairs").setup()
+require("mini.surround").setup()
+require("mini.comment").setup()
 require("mini.pick").setup()
 local statusline = require("mini.statusline")
 statusline.setup({
@@ -41,7 +45,7 @@ statusline.setup({
 	},
 })
 
--- Configurations
+require("trouble").setup()
 local servers = { "lua_ls", "yamlls" }
 require("mason").setup()
 require("mason-lspconfig").setup({
