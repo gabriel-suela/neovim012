@@ -1,7 +1,10 @@
 vim.pack.add({
 	"https://github.com/D0nw0r/dark2026.nvim",
 	"https://github.com/nvim-neo-tree/neo-tree.nvim",
+	"https://github.com/catppuccin/nvim",
 	"https://github.com/MunifTanjim/nui.nvim",
+	"https://github.com/nvzone/floaterm",
+	"https://github.com/nvzone/volt",
 	"https://github.com/nvim-tree/nvim-web-devicons",
 	"https://github.com/nvim-lua/plenary.nvim",
 	"https://github.com/nvim-mini/mini.nvim",
@@ -80,6 +83,9 @@ require("conform").setup({
 		lua = { "stylua" },
 		yaml = { "prettier" },
 	},
+})
+require("catppuccin").setup({
+	transparent_background = true,
 })
 
 vim.lsp.config("lua_ls", {

@@ -13,7 +13,7 @@ vim.o.shiftwidth = 2
 vim.o.tabstop = 2
 vim.o.clipboard = "unnamedplus"
 
-vim.cmd("syntax off")
+-- vim.cmd("syntax off")
 
 vim.diagnostic.config({
 	severity_sort = true,
