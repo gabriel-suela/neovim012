@@ -39,3 +39,13 @@ vim.api.nvim_create_autocmd("LspAttach", {
 		end
 	end,
 })
+
+vim.api.nvim_create_autocmd({ "BufRead", "BufNewFile" }, {
+  pattern = {
+    "*.yaml.gotmpl",
+    "*.yml.gotmpl",
+  },
+  callback = function()
+    vim.bo.filetype = "yaml"
+  end,
+})
